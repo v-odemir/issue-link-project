@@ -107,21 +107,3 @@ class MultipleSubjects(PyTorchDataset):
 
         return train_dataset, val_dataset, test_dataset
 
-    def get_train_test_dataset(self, **kwargs):
-
-        test_subject_id = kwargs["test_subject_id"] if "test_subject_id" in kwargs else 1
-
-        # get test data
-        test_sub_idx = np.where(self.subject_ids == test_subject_id)[0][0]
-        selected_subject_data = self.data[test_sub_idx]
-        selected_subject_targets = self.targets[test_sub_idx]
-        test_dataset = PyTorchDataset(selected_subject_data, selected_subject_targets)
-
-        # get train data
-        indices = np.arange(self.data.shape[0])
-        X_train = self.data[indices!=test_sub_idx, :, :, :]
-        X_train = X_train.reshape((X_train.shape[0]*X_train.shape[1], X_train.shape[2], X_train.shape[3]))
-        y_train = self.targets[indices!=test_sub_idx, :]
-        y_train = y_train.reshape((y_train.shape[0]*y_train.shape[1]))
-        train_dataset = PyTorchDataset(X_train, y_train)
-        return train_dataset, test_dataset

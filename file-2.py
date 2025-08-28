@@ -17,8 +17,8 @@ class MultipleSubjects(PyTorchDataset):
         self.root = root
         self.subject_ids = subject_ids
         
-        self._load_multiple(root, dataset, subject_ids, func_preprocessing, verbose)
-        self.targets_frequencies = self.stimulus_frequencies[self.targets]
+        #self._load_multiple(root, dataset, subject_ids, func_preprocessing, verbose)
+        #self.targets_frequencies = self.stimulus_frequencies[self.targets]
         
         self.func_get_train_val_test_dataset = func_get_train_val_test_dataset
     

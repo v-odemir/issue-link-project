@@ -10,7 +10,7 @@ class MultipleSubjects(PyTorchDataset):
         root: str, 
         subject_ids: [], 
         #func_preprocessing=None,
-        func_get_train_val_test_dataset=None,
+        #func_get_train_val_test_dataset=None,
         verbose: bool = False, 
     ) -> None:
         

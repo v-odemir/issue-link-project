@@ -16,14 +16,3 @@ sdfkgjhdsakf
 kjdhfgkjdsddlkjf
 dklfjghkd
 dfgkjdfgkjdfg
-dflgjdfkgjsdafdf
-gdfsdfsdfsdf
-dlgfkjsdf
-jfkdjsdgfsdfg
-sadgdfgsafdg
-kjfdgfd
-fdkgjffdkjg
-gksjgdf
-dfgsfjkdhsdjfgs
-dgdfgdg
-dfgkdsfgsdjfg

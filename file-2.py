@@ -50,3 +50,18 @@ sgrfbvlsdknfaf
 svadlnfklbndaşsvafdsvbldfs
 dvdljfnkasdjf
 asfdlgajsndfasdv
+
+
+def bubble_sort(items):
+    """Sort a list in ascending order using bubble sort. Returns a new list."""
+    result = list(items)
+    n = len(result)
+    for i in range(n - 1):
+        swapped = False
+        for j in range(n - 1 - i):
+            if result[j] > result[j + 1]:
+                result[j], result[j + 1] = result[j + 1], result[j]
+                swapped = True
+        if not swapped:
+            break
+    return result
